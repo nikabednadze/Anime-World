@@ -1,0 +1,195 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #11111b;
+    color: white;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 45px 20px;
+    background: linear-gradient(135deg, #25144d, #5533a8);
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #d5c9ff;
+}
+
+/* NAVIGATION */
+nav {
+    background: #1c1c2b;
+    text-align: center;
+    padding: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #3d3b41;
+}
+
+/* MAIN */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #b9a0ff;
+    margin-bottom: 20px;
+}
+
+/* WELCOME */
+.welcome {
+    text-align: center;
+    padding: 35px;
+    background: #1c1c2b;
+    border-radius: 15px;
+    border: 1px solid #393052;
+    animation: fadeIn 1s ease;
+}
+
+/* ANIME CARDS */
+.anime-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.anime-card {
+    background: #1c1c2b;
+    padding: 15px;
+    border: 1px solid #393052;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease;
+}
+
+.anime-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #29243c;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.anime-card h3 {
+    color: #b9a0ff;
+    margin-bottom: 8px;
+}
+
+/* BUTTON */
+.anime-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 9px 18px;
+    background: #7652d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.anime-button:hover {
+    background: #a78bfa;
+    transform: scale(1.05);
+}
+
+/* VIDEO */
+.video-section {
+    background: #1c1c2b;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.video-section iframe {
+    border: none;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #1c1c2b;
+    color: #aaa;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .anime-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Anime cards hover animation */
+.anime-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.anime-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(160, 100, 255, 0.3);
+}
+
+.anime-card img {
+    transition: transform 0.4s ease;
+}
+
+.anime-card:hover img {
+    transform: scale(1.06);
+}
